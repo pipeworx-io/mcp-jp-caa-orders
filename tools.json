@@ -1,0 +1,39 @@
+[
+  {
+    "name": "jp_caa_orders_search",
+    "description": "Search the Japan Consumer Affairs Agency's announced administrative dispositions against businesses: cease-and-desist orders (措置命令) and surcharge payment orders (課徴金納付命令) under the Act against Unjustifiable Premiums and Misleading Representations (景品表示法), and dispositions under the Specified Commercial Transactions Act (特定商取引法: door-to-door, mail-order, telephone-solicitation, multi-level and continuing-service businesses). By company name in Japanese or English; match is exact or partial after Unicode folding and corporate-form words are dropped. Each hit gives the announcement date, law, order type, business type, the businesses named, the announcement's title and a link to the agency's announcement. Coverage starts April 2021 (fiscal 2021); announcements naming no business in the title (e.g. \"2 businesses\") and individuals are not searchable and are counted in the response. No hit means no announcement naming that company in the period covered, as read now; it does not clear the company. Example: name=\"株式会社ジャパネットたかた\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name in Japanese or English. At least 2 characters."
+        },
+        "law": {
+          "type": "string",
+          "enum": [
+            "specified_commercial_transactions",
+            "unjustifiable_premiums_misleading_representations"
+          ],
+          "description": "Optional: restrict to one law."
+        },
+        "order_type": {
+          "type": "string",
+          "enum": [
+            "cease_and_desist_order",
+            "surcharge_payment_order",
+            "administrative_disposition"
+          ],
+          "description": "Optional: restrict to one order type."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum matches returned (1-50, default 10); `total_matches` always gives the full count."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+]

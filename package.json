@@ -1,0 +1,33 @@
+{
+  "name": "@pipeworx/mcp-jp-caa-orders",
+  "version": "0.1.0",
+  "description": "jp-caa-orders -- the Consumer Affairs Agency (消費者庁) announcements of administrative dispositions against businesses: orders and penalties under the Act on Specified Commercial Transactions (特定商取引法, and the Deposit Transactions Act, as the agency files them) and the Act against Unjustifiable…",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "mcp-jp-caa-orders": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "jp-caa-orders"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-jp-caa-orders.git"
+  },
+  "mcpName": "io.github.pipeworx-io/jp-caa-orders",
+  "pipeworx": {
+    "mode": "gateway",
+    "slug": "jp-caa-orders",
+    "gatewaySlug": "jp-caa-orders",
+    "sourceHash": "v1-985156a651222f0498051ff742e9454fce1eafb09c9b1238ee3a26451fc90ace",
+    "sourceCommit": "9b123410e80fd80deb8ee57bee9f84a34f5e3430"
+  }
+}

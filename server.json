@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/jp-caa-orders",
+  "title": "Jp Caa Orders",
+  "description": "jp-caa-orders -- the Consumer Affairs Agency (消費者庁) announcements of administrative dispositions…",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/jp-caa-orders",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-jp-caa-orders",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/jp-caa-orders/mcp"
+    }
+  ]
+}
